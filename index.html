@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>essential — komai home</title>
+<link rel="icon" href="images/common/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="16x16" href="images/common/favicon-16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="images/common/favicon-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="images/common/icon-192.png">
+<link rel="apple-touch-icon" href="images/common/apple-touch-icon.png">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="komai home">
+<meta property="og:title" content="essential— komai home">
+<meta property="og:description" content="すべてが心地よい住まいをつくるエッセンス。">
+<meta property="og:url" content="https://example.com/">
+<meta property="og:image" content="https://example.com/images/common/ogp.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,200;0,300;0,400;1,200;1,300&family=Zen+Kaku+Gothic+New:wght@300;400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- INTRO VIDEO -->
+<div class="intro-video" id="introVideo">
+  <video id="introVideoEl" src="" playsinline></video>
+  <button class="intro-skip" id="introSkip">skip ✕</button>
+  <div class="intro-tap-hint" id="introTapHint">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><circle cx="12" cy="12" r="9"/><path d="M9 8l6 4-6 4V8z" fill="currentColor" stroke="none"/></svg>
+    <span>tap to play with sound</span>
+  </div>
+</div>
+
+<!-- FLOATING SHARE -->
+<div class="fab-wrap">
+  <button class="fab-main" id="fabMain" onclick="toggleFab()">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7.217 10.907a2.25 2.25 0 100 2.186m0-2.186c.18.324.283.696.283 1.093s-.103.77-.283 1.093m0-2.186l9.566-5.314m-9.566 7.5l9.566 5.314m0 0a2.25 2.25 0 103.935 2.186 2.25 2.25 0 00-3.935-2.186zm0-12.814a2.25 2.25 0 103.933-2.185 2.25 2.25 0 00-3.933 2.185z"/></svg>
+  </button>
+  <div class="fab-items" id="fabItems">
+    <button class="fab-item" onclick="shareX()">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.737-8.835L1.254 2.25H8.08l4.253 5.622L18.244 2.25zm-1.161 17.52h1.833L7.084 4.126H5.117L17.083 19.77z"/></svg>
+      X
+    </button>
+    <button class="fab-item" onclick="shareLine()">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.630 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.346 0 .627.285.627.63 0 .349-.281.63-.63.63H17.61V9.86h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.630-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.630 0 .344-.282.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/></svg>
+      LINE
+    </button>
+    <button class="fab-item" id="copyBtn" onclick="copyLink()">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m13.35-.622l1.757-1.757a4.5 4.5 0 00-6.364-6.364l-4.5 4.5a4.5 4.5 0 001.242 7.244"/></svg>
+      COPY
+    </button>
+  </div>
+</div>
+
+<!-- 1. CONCEPT -->
+<section class="sec-concept section" id="top">
+  <img class="concept-illust" src="images/assets/placeholder.jpg" alt="">
+  <p class="concept-tag reveal">essential</p>
+  <h1 class="concept-title reveal d1">
+    私達に<br><em>似合う</em><br>家。
+  </h1>
+  <p class="concept-body reveal d2">
+   キッチンから眺める中庭、<br>
+   リビングから空を感じる吹抜け、<br>
+   空間と空間とをつなげるリビング階段、<br>
+   <br>
+   そのどれもが<br>
+   心地よい住まいをつくるエッセンス。<br>
+   <br>
+   ── komai home
+  </p>
+</section>
+
+<!-- 2. GALLERY -->
+<section class="sec-gallery section" id="gallery">
+  <div class="gallery-hd">
+    <p class="gallery-tag reveal">Gallery</p>
+    <h2 class="gallery-title reveal d1">完成写真</h2>
+  </div>
+  <div class="masonry" id="masonryGrid">
+    <div class="masonry-col" id="colLeft"></div>
+    <div class="masonry-col" id="colRight"></div>
+  </div>
+</section>
+
+<!-- 3. 一問一答 -->
+<section class="sec-qa section" id="qa">
+  <div class="qa-hd">
+    <p class="qa-tag reveal">Interview</p>
+    <h2 class="qa-title reveal d1">ご夫婦に、聞いた。</h2>
+  </div>
+  <div class="qa-cards" id="qaCards">
+    <!-- JSで生成 -->
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <span class="footer-brand">komai home</span>
+  <button class="footer-btn" onclick="replayIntro()">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 5v14l11-7z"/></svg>
+    動画を見る
+  </button>
+</footer>
+
+<!-- GALLERY MODAL -->
+<div class="g-modal" id="gModal">
+  <button class="g-modal-close" onclick="closeGModal()">✕ close</button>
+  <div class="g-modal-inner" id="gModalInner"></div>
+</div>
+
+<!-- QA MODAL -->
+<div class="qa-modal" id="qaModal">
+  <button class="qa-modal-close" onclick="closeQaModal()">✕ close</button>
+  <button class="qa-nav-arrow qa-nav-prev" onclick="renderQaModal(qaModalIndex - 1)">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M15 6l-6 6 6 6"/></svg>
+  </button>
+  <div class="qa-modal-inner" id="qaModalInner"></div>
+  <button class="qa-nav-arrow qa-nav-next" onclick="renderQaModal(qaModalIndex + 1)">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 6l6 6-6 6"/></svg>
+  </button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
