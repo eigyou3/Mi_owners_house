@@ -299,7 +299,10 @@ const introVideoEl = document.getElementById('introVideoEl');
 const introSkip    = document.getElementById('introSkip');
 const introTapHint = document.getElementById('introTapHint');
 
-if (VIDEO_URL) introVideoEl.src = VIDEO_URL;
+if (VIDEO_URL) {
+  introVideoEl.src = VIDEO_URL;
+  introVideoEl.load();
+}
 
 // 動画再生中はページの裏スクロールをロック
 window.scrollTo(0, 0);
