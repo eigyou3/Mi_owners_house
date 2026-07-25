@@ -31,7 +31,7 @@ setConceptBg();
 // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 // ▼ 動画URL（Dropboxのdl=1リンク）
 // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-const VIDEO_URL = 'https://www.dropbox.com/scl/fi/da3tinu09ifb1tjeg14or/m-tei.mp4?rlkey=f03soqey1nmj4wzg1phlymcqz&dl=1';
+const VIDEO_URL = 'https://www.dropbox.com/scl/fi/da3tinu09ifb1tjeg14or/m-tei.mp4?rlkey=f03soqey1nmj4wzg1phlymcqz&raw=1';
 
 // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 // ▼ ギャラリー写真（name=ラベル, after=完成写真, before=工事中写真, 画像の高さ）
