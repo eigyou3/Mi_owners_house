@@ -499,7 +499,6 @@ body.modal-open .fab-wrap { display: none; }
 }
 
 @media(max-width:640px){
-  .g-modal-inner { grid-template-columns: 1fr; }
   .qa-cards { grid-template-columns: 1fr; }
   .concept-illust { display: none; }
 }
